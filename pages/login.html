@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود یا ثبت نام</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="button-group">
+      <button onclick="toggleForm('login')">ورود</button>
+      <button onclick="toggleForm('signup')">ثبت نام</button>
+    </div>
+    <div id="loginForm" class="form active">
+      <h2>ورود</h2>
+      <form action="#">
+        <input type="text" placeholder="نام کاربری" required>
+        <input type="password" placeholder="رمزعبور" required>
+        <input type="submit" value="ورود">
+      </form>
+    </div>
+    <div id="signupForm" class="form">
+      <h2>ثبت نام</h2>
+      <form action="#">
+        <input type="text" placeholder="نام کاربری" required>
+        <input type="email" placeholder="ایمیل" required>
+        <input type="password" id="password" placeholder="پسورد" required oninput="checkPasswordStrength()">
+        <div id="strength-bar"></div>
+        <ul id="conditions">
+          <li id="length" class="condition">حداقل ۸ کاراکتر</li>
+          <li id="uppercase" class="condition">یک حرف بزرگ</li>
+          <li id="number" class="condition">یک عدد</li>
+          <li id="special" class="condition">یک کاراکتر ویژه</li>
+        </ul>
+        <input type="submit" value="ثبت">
+      </form>
+    </div>
+  </div>
+      <script src="../js/login.js"></script>
+</body>
+</html>

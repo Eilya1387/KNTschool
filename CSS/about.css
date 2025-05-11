@@ -1,0 +1,450 @@
+@font-face {
+  font-family: Hilda;
+  src: url(../fonts/Hilda\ @fontraigannn.ttf);
+}
+@font-face {
+  font-family: Pelak;
+  src: url(../fonts/Pelak-Bold.ttf);
+}
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+
+}
+a {
+  text-decoration: none;
+}
+body { 
+  font-family: Pelak;
+background: linear-gradient(to bottom, #ffffff, #ffffff);
+color: #333;
+text-align: center;
+}
+header{
+ margin-bottom: 50px;
+ font-size: 30px;
+}
+
+/*توضیحات */
+.container1 {
+      display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
+
+   }
+.text-box {
+    flex: 1;
+    color: #161515;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 3px 6px 5px rgba(219, 188, 188, 0.808);
+
+}
+    
+ 
+    
+.cursor {
+  display: inline-block;
+  background-color: #fff;
+  width: 2px;
+ animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+  }
+    
+
+  .image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-box img {
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+  transform: translateY(60px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: opacity 1s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+
+/*معرفی رشته های درسی*/
+
+
+.container {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 15rem;
+}
+.container h4{
+width: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+position: relative;
+font-family: Hilda;
+font-size: 3rem;
+}
+
+
+
+.book {
+  width: 220px;
+  height: 300px;
+  background: linear-gradient(rgba(255, 252, 252, 0.747),rgb(255, 252, 252)) ,url(./img/book.jpg)  no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 60px 0;
+ 
+}
+
+.cover {
+  background: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.book:hover .cover {
+  transform: rotateY(-80deg);
+}
+
+.book p{
+ width: 70%;
+ text-align: center;
+ color: #292626;
+ font-size: 1rem;
+}
+
+
+/*بخش امکانات هنرستان*/
+
+.features {
+  text-align: center;
+  background: #fff;
+  margin: 70px 0;
+ transform: translateY(70px);
+}
+
+.features-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: Hilda;
+
+}
+
+.features-grid {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+text-align: center;
+
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1.5rem;
+  width: 30%;
+  height: 16rem;
+}
+
+.feature-card img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+
+
+
+.feature-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+#show-more {
+  background-color: #ff8c00;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#show-more:hover {
+  background-color: #e67e00;
+}
+
+
+
+
+/*گالری تصاویر*/
+
+#gallerys{
+ background: #fff;
+ transform: translateY(120px);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  perspective: 1500px;
+ 
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.glow-text{
+  font-family: Hilda;
+  font-size: 3rem;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f70c0; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; 
+}
+
+
+
+
+
+
+/* -----------------------responsive------------------------------- */
+
+
+@media screen and (max-width:1200px){
+
+  
+  }
+  
+  @media screen and (max-width:992px){
+    .text-box{
+      font-size: 27px;
+    }
+    .container1{
+      flex-direction: column-reverse;
+      gap: 8rem;
+    }
+    .container{
+      margin-top: 9rem;
+
+    }
+  
+  }
+  
+  @media screen and (max-width:930px){
+  
+  
+  }
+  
+  
+  /* tablets */
+  @media screen and (max-width:768px){
+    .sticky-footer__items__svg {
+      width: 27px;
+    
+    }
+    .sticky-footer__items__p{
+      
+      font-size: 11px;
+      
+    
+    
+    }
+    .gallery{
+      margin-bottom: 8rem;
+    }
+  
+  }
+  
+
+  /* mobile */
+  @media screen and (max-width:576px){
+    .text-box{
+      font-size: 18px;
+    }
+    h4{ 
+      font-size: 2.3rem !important;
+    }
+    .features-title{
+      font-size: 2.5rem;
+    }
+    .book{
+      width: 200px;
+      height: 280px;
+    }
+    .feature-card{
+      font-size: .8rem;
+      text-align: center;
+    }
+    .feature-card p{
+    
+      font-size: .7rem;
+    }
+  }
+
+  /* extra */
+  @media screen and (max-width:400px) {
+    .feature-card{
+      font-size: .8rem;
+     
+    }
+    .feature-card p{
+    
+      font-size: .6rem;
+    }
+    .features-title{
+      font-size: 2.3rem;
+    }
+    
+  }
+  
+  
+  @media screen and (min-width:768px){
+  
+  
+  }
+  
+  
+  @media screen and (min-width:992px){
+  
+  
+  }
+
+  
+/* sticky footer  */
+@media screen and (min-width:768px){
+  .sticky-footer{
+    display: none;
+    visibility: hidden;
+  }
+}  
+/* sticky footer  */
+
+.sticky-footer{
+  width: 100%;
+  height: 5rem;
+  background-color: #14cbe3;
+  position: sticky;
+  bottom: 0 ;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+ z-index: 1000;
+ opacity: 1;
+ transition: .5s;
+ font-family: inherit;
+ direction: ltr;
+ margin-top: 4rem;
+ 
+}
+.sticky-footer__items{
+  clear: both;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: px   ;
+  flex-direction: column;
+  padding: .5rem;
+  flex-wrap: nowrap;
+
+}
+.sticky-footer__items__svg {
+  width: 30px;
+  height: 100%;
+  filter: drop-shadow(1px 1px 8px #051937);
+  color: #051937;
+}
+.sticky-footer__items__p{
+  color: #051937;
+  font-size: 15px;
+  text-shadow: 1px 1px 8px #051937;
+  font-family: pelak;
+
+
+}
+.sticky-footer__items__p{
+  text-decoration: none;
+  appearance: none  ;
+}
+.sticky-footer .sticky-footer__items:nth-child(3)  {
+   
+  background-color: #051937;
+}
+
+.sticky-footer .sticky-footer__items:nth-child(3)  .sticky-footer__items__svg {
+  color: #14cbe3 !important;
+}
+
+.sticky-footer .sticky-footer__items:nth-child(3)  .sticky-footer__items__p {
+  color: #14cbe3 !important;
+}
