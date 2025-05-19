@@ -6,165 +6,239 @@
   font-family: Pelak;
   src: url(../fonts/Pelak-Bold.ttf);
 }
-*{
+
+* {
   font-family: Pelak;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: url(../images/copy-space-surrounded-by-office.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url(../images/copy-space-surrounded-by-office.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  }
-  #strength-bar {
-    margin-top: 10px;
-    transition: all 0.3s ease;
-  }
+.container {
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(1.3);
+}
 
-  #conditions {
-    list-style-type: none;
-    padding: 0;
-  }
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
 
-  .condition {
-    position: relative;
-    overflow: hidden;
-    color: black;
-    transition: color 0.3s ease;
-  }
+.button-group button {
+  flex: 1;
+  background: #0f70c0;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
 
-  .condition.fulfilled {
-    color: black;
-  }
+.button-group button:hover {
+  background-color: #0f70c0;
+}
 
-  .condition.fulfilled::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: black;
-    left: 0;
-    bottom: 50%;
-    transform: translateY(50%) scaleX(0);
-    transform-origin: left;
-    animation: drawLine 0.5s ease forwards;
-  }
+.form {
+  display: none;
+}
 
-  @keyframes drawLine {
-    to {
-      transform: translateY(50%) scaleX(1);
-    }
+.form.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #0f70c0;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+input[type="submit"] {
+  background-color: #0f70c0;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+#strength-bar {
+  height: 5px;
+  width: 0;
+  margin-top: 10px;
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+#conditions {
+  list-style-type: none;
+  padding: 0;
+}
+
+.condition {
+  position: relative;
+  overflow: hidden;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.condition.fulfilled {
+  color: black;
+}
+
+.condition.fulfilled::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%) scaleX(0);
+  transform-origin: left;
+  animation: drawLine 0.5s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    transform: translateY(50%) scaleX(1);
   }
+}
+
+
+#strength-bar {
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+#conditions {
+  list-style-type: none;
+  padding: 0;
+}
+
+.condition {
+  position: relative;
+  overflow: hidden;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.condition.fulfilled {
+  color: black;
+}
+
+.condition.fulfilled::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%) scaleX(0);
+  transform-origin: left;
+  animation: drawLine 0.5s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    transform: translateY(50%) scaleX(1);
+  }
+}
+
+@media screen and (max-width: 576px) {
   .container {
-    width: 350px;
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transform: scale(1.3);
+    width: 260px;
+    font-size: 0.8rem;
   }
-  
-  .button-group {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
   .button-group button {
-    flex: 1;
-    background:#0f70c0;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    font-size: 0.7rem;
   }
-  
-  .button-group button:hover {
-    background-color: #0f70c0;
+  form input {
+    font-size: 0.6rem;
   }
-  
-  .form {
-    display: none;
-  }
-  
-  .form.active {
-    display: block;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input[type="text"], input[type="email"], input[type="password"] {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  input[type="submit"] {
-    background-color: #0f70c0;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
+}
 
+@media screen and (max-width: 450px) {
+  .container {
+    width: 220px;
+  }
+}
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
-  ::-webkit-scrollbar {
-    width: 10px; 
-    height: 10px; 
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px; 
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #0f70c0; 
-    border-radius: 10px; 
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0056b3; 
-  }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
 
-  @media  screen and (max-width:576px) 
-  {
-    .container{
-      width: 260px;
-      font-size:.8rem ;
-    }
-    .button-group button{
-      font-size:.7rem ;
-    }
-    form input{
-      font-size: .6rem;
-    }
-    
-  }
-  @media  screen and (max-width:450px) 
-  {
-    .container{
-      width: 220px;
-    }
-    
-  }
+::-webkit-scrollbar-thumb {
+  background: #0f70c0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
