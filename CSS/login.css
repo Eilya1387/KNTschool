@@ -146,7 +146,7 @@ input[type="submit"]:hover {
 }
 
 .condition.fulfilled::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 100%;
@@ -163,7 +163,6 @@ input[type="submit"]:hover {
     transform: translateY(50%) scaleX(1);
   }
 }
-
 
 #strength-bar {
   margin-top: 10px;
@@ -187,7 +186,7 @@ input[type="submit"]:hover {
 }
 
 .condition.fulfilled::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 100%;

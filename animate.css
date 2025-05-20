@@ -1,4 +1,3 @@
-
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
@@ -98,7 +97,7 @@
     animation-iteration-count: 1 !important;
   }
 
-  .animate__animated[class*='Out'] {
+  .animate__animated[class*="Out"] {
     opacity: 0;
   }
 }

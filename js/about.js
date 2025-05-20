@@ -4,15 +4,14 @@ const texts = [
   "در مسیر تحقق رؤیاهای شما گام برمی‌داریم.",
   "خلاقیت، تلاش و موفقیت؛ شعار ماست.",
   "هنرستان ما مسیر موفقیت شما را هموار می‌کند.",
-  "آینده شما با دانش و مهارت شکل می‌گیرد."
+  "آینده شما با دانش و مهارت شکل می‌گیرد.",
 ];
 
 const images = [
-"../images/photo_2025-04-20_20-03-12.jpg",
-"../images/photo_21_2025-04-20_20-31-57.jpg",
-"../images/photo_14_2025-04-20_20-31-57.jpg",
-"../images/photo_17_2025-04-20_20-31-57.jpg"
-
+  "../images/photo_2025-04-20_20-03-12.webp",
+  "../images/photo_21_2025-04-20_20-31-57.webp",
+  "../images/photo_14_2025-04-20_20-31-57.webp",
+  "../images/photo_17_2025-04-20_20-31-57.webp",
 ];
 
 let textIndex = 0;
@@ -33,7 +32,7 @@ function type() {
       charIndex = 0;
       textIndex = (textIndex + 1) % texts.length;
       type();
-    }, 2000); 
+    }, 2000);
   }
 }
 
@@ -51,9 +50,3 @@ function changeImage() {
 
 type();
 changeImage();
-
-
-
-
-
-

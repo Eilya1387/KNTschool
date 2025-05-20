@@ -38,7 +38,7 @@ header {
   justify-content: center;
   /* background: black; */
   backdrop-filter: blur(20px);
-background-color: rgba(0, 0, 0, 0.098);
+  background-color: rgba(0, 0, 0, 0.098);
   text-align: center;
   align-items: center;
   color: white;
@@ -71,11 +71,9 @@ li {
   color: white;
   z-index: 1000;
 }
-.items :nth-child(4){
-text-align: center !important;
-margin-bottom: .2rem;
-
-  
+.items :nth-child(4) {
+  text-align: center !important;
+  margin-bottom: 0.2rem;
 }
 .big-title {
   animation: show 1s ease-in 0.3s 1;
@@ -130,8 +128,8 @@ h1 {
   }
 }
 .inner-ul {
-  margin-top:9rem;
-  
+  margin-top: 9rem;
+
   width: 15rem;
   height: 7rem;
   backdrop-filter: blur(20px);
@@ -174,7 +172,7 @@ a {
   text-decoration: none;
   color: white;
 }
-.master-li a{
+.master-li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,26 +261,22 @@ a {
   border-radius: 18px 18px 18px 0px;
   clip-path: path("M245,0 H0 V220 Q194 210 227 113");
 }
-.bx1{
-
+.bx1 {
   background-image: url(./images/memari.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.bx2{
-
+.bx2 {
   background-image: url(./images/computer.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.bx3{
-
+.bx3 {
   background-image: url(./images/hesabdari.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.bx4{
-
+.bx4 {
   background-image: url(./images/sh-2.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -464,7 +458,7 @@ a {
   pointer-events: none;
 }
 .slide h2 {
-font-size: 5vh;
+  font-size: 5vh;
 }
 .slide:last-child {
   border-right: none;
@@ -767,8 +761,6 @@ footer h3 {
   opacity: 1;
 }
 /* end-scroll-btn */
-
-
 #progress-bar {
   position: fixed;
   top: 0;
@@ -778,26 +770,21 @@ footer h3 {
   background: linear-gradient(#051937, #0f70c0);
   z-index: 1000;
 }
-
-
-
-
-
 ::-webkit-scrollbar {
-  width: 10px; 
-  height: 10px; 
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-  border-radius: 10px; 
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0f70c0; 
-  border-radius: 10px; 
+  background: #0f70c0;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0056b3; 
+  background: #0056b3;
 }

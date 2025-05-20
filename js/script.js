@@ -1,29 +1,31 @@
 if (window.innerWidth >= 768) {
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = './animate.css';
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "./animate.css";
   document.head.appendChild(link);
   new WOW({
-  boxClass:     'wow',      
-  animateClass: 'animate__animated', 
-  offset:       100,        
-  mobile:       false,       
-  live:         true        
-}).init();
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
-  const progress = (scrollTop / windowHeight) * 100; 
-  document.getElementById('progress-bar').style.width = progress + '%';
-});
+    boxClass: "wow",
+    animateClass: "animate__animated",
+    offset: 100,
+    mobile: false,
+    live: true,
+  }).init();
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const windowHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const progress = (scrollTop / windowHeight) * 100;
+    document.getElementById("progress-bar").style.width = progress + "%";
+  });
 }
 const images = document.querySelectorAll(".photo");
 
 images.forEach((image) => {
   image.addEventListener("mousemove", (event) => {
     const rect = image.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2; 
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2; 
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
 
     image.style.transform = `rotateX(${y * 15}deg) rotateY(${x * 15}deg)`;
   });
@@ -106,7 +108,7 @@ function inHeght() {
   console.log("New Height (rem):", newHeight);
   if (newHeight > 120) {
     mbtn.style.display = "none";
-    mNews.style.maxHeight="100%";
+    mNews.style.maxHeight = "100%";
   }
 }
 
@@ -131,7 +133,3 @@ function side() {
     body.style.overflowY = "hidden";
   }
 }
-
-
-
-
