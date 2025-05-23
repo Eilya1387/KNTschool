@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: Pelak;
 }
+::selection {
+  background: #051937;
+  color: #0f70c0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -59,8 +64,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  cursor: pointer;
   width: 100%;
   text-align: center;
   height: 5vh;
@@ -494,6 +497,45 @@ a {
 .prof-card h2 {
   font-size: 7vh;
   font-family: Hilda;
+}
+
+.line-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  margin: 30px;
+}
+
+.center-line {
+  text-align: center;
+  transform: rotate(-90deg);
+}
+.rgb-text {
+  background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 6s ease infinite;
+  font-weight: bold;
+}
+
+@keyframes rainbowText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* end-div-slid */
