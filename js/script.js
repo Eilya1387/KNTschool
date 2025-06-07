@@ -139,7 +139,7 @@ const poem2 = document.querySelector(".poem2");
 const h1 = document.getElementById("title");
 let middleClickCount = 0;
 const finalText = "عدالت حسینی";
-const p1 = "این گروه تصمیم دارد عدالت را برقرار کن حال ";
+const p1 = "این گروه تصمیم دارد عدالت را برقرار کند حال ";
 const p2 = " تصمیم با شماست که کدام سوی ترازوی عدالت هستید";
 const chars = "ضصثقفغعهخحجچشسیبلاتنمکگظطزرذدپو1234567890%$#@!";
 
