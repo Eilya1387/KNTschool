@@ -1,3 +1,66 @@
+const header = document.querySelector(".header");
+const poem1 = document.querySelector(".poem1");
+const poem2 = document.querySelector(".poem2");
+const h1 = document.getElementById("title");
+let middleClickCount = 0;
+const finalText = "عدالت حسینی";
+const p1 = "این گروه تصمیم دارد عدالت را برقرار کند حال ";
+const p2 = " تصمیم با شماست که کدام سوی ترازوی عدالت هستید";
+const chars = "ضصثقفغعهخحجچشسیبلاتنمکگظطزرذدپو1234567890%$#@!";
+
+
+function randomString(length) {
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
+function revealText(element, text, delay = 100) {
+  let iteration = 0;
+  const interval = setInterval(() => {
+    let displayed = "";
+    for (let i = 0; i < text.length; i++) {
+      if (i < iteration) {
+        displayed += text[i];
+      } else {
+        displayed += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+    element.textContent = displayed;
+    if (iteration >= text.length) {
+      clearInterval(interval);
+      element.classList.add("glitch");
+      element.setAttribute("data-text", text);
+      element.textContent = text;
+    }
+    iteration++;
+  }, delay);
+}
+
+h1.addEventListener("mousedown", function (event) {
+  if (event.button === 1) {
+    event.preventDefault();
+    middleClickCount++;
+
+    if (middleClickCount === 10) {
+      h1.style.color = "white";
+      h1.style.transform = "scale(1.2)";
+      revealText(h1, finalText);
+      revealText(poem1, p1);
+      revealText(poem2, p2);
+
+
+      const header = document.querySelector("header");
+      if (header) {
+        header.style.backgroundImage = "none";
+        header.style.backgroundColor = "black";
+      }
+    }
+  }
+});
+
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(["module", "exports"], factory);
